@@ -1,1 +1,37 @@
-  
+.wrapper{
+    width: 490px;
+    height: 590px;
+}
+.background{
+    height: 590px;
+    width: 490px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.tobt{
+    font-size: 3em;
+    color: limegreen;
+    position: absolute;
+    left: 100px; 
+    top: 125px;
+}
+
+.fltno{
+    font-size: 3em;
+    color: limegreen;
+    position: absolute;
+    text-align: center;
+    width: 490px;
+    height: 590px;
+}
+#demo{
+    font-size: 3em;
+    color: limegreen;
+    position: absolute;
+    width: 490px;
+    height: 590px;
+    text-align: center;
+    top: 240px;
+
+}

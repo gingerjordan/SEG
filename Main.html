@@ -1,12 +1,54 @@
 <HTML>
 <head>
-
-  
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body class="background">
+<div class="wrapper">
+<div class="tobt" height=100px width=100px>
+    TOBT : 12:00Z
+</div>
+<div class="fltno">
+</div>
+<div id="demo">
+    <!-- Display the countdown timer in an element -->
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 4, 2018 17:31:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = "-" + minutes;
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "+" + -minutes;
+  }
+}, 1000);
+</script>
     
+</div>
+
+    <svg width="500" height="600">
+        <rect width="490" height="590" style="fill:grey;stroke-width:3;stroke:rgb(0,0,0)" />
+        <rect width="200" height="300" y="290"/>
+        <rect width="200" height="300" y="290" x="290"/>
+    </svg>
+</div>    
 </body>
 
-
-    
 </HTML>

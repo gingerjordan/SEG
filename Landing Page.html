@@ -1,0 +1,29 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">  
+</head>
+<body>
+    <form action="Main.html" method="POST" onClick="javascript:verify()">
+        Flight Number:<br>
+        <input type="text" name="FlightNumber" placeholder="BAW123"><br>
+        TOBT:<br>
+        <input type="text" name="TOBT" placeholder="1300"><br>
+        <input type="submit" value="Submit" ><br>
+
+<script>
+function verify()
+ {
+   var FlightNumber = document.getElementById('FlightNumber').value;  
+   document.cookie = "FlightNumber";
+ }
+</script>
+    
+
+</body>
+
+
+
+
+
+
+</html> 
